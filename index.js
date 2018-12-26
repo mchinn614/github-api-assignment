@@ -13,21 +13,25 @@ function getRepos(userName){
     fetch(url)
     .then(repsonse=>{
         if(response.ok){
+            console.log(reponse)
             return response.json();
         };
+        console.log(response)
         throw new Error(response.statusText);
     })
-    .then(responseJson=>{console.log(responseJson)})
-    .catch(error=>)
-
+    .then(responseJson=>{displayResults(responseJson)})
+    .catch(alert('Something Went Wrong'))
 
 };
 
 function displayResults(resultList){
     var i
-    for (i=0;i<responseJson.length)
-    const repoName = responseJson.name;
-    const repoLink = response.Json.svn_url;
+    for (i=0;i<2;i++){
+        const repoName = resultList[i].name;
+        const repoLink = resultList[i].svn_url;
+        console.log(repoName)
+        console.log(repoList)
+    }
 };
 
 function watchSubmit(){
@@ -38,3 +42,5 @@ function watchSubmit(){
     })
 
 };
+
+$(watchSubmit());
