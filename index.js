@@ -10,6 +10,7 @@ App will take user input of github handle then list all github repos on page
 
 function getRepos(userName){
     const url =`https://api.github.com/users/${userName}/repos`;
+    console.log(url);
     fetch(url)
     .then(response=>{
         if(response.ok){
@@ -38,6 +39,7 @@ function watchSubmit(){
     $('form').on('submit',event=>{
         event.preventDefault();
         const userName = $('.userName').val();
+        console.log(userName);
         getRepos(userName)
     })
 
