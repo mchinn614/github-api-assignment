@@ -13,7 +13,7 @@ function getRepos(userName){
     fetch(url)
     .then(response=>{
         if(response.ok){
-            console.log(reponse)
+            console.log(response)
             return response.json();
         };
         console.log(response)
