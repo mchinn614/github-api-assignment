@@ -11,7 +11,7 @@ App will take user input of github handle then list all github repos on page
 function getRepos(userName){
     const url =`https://api.github.com/users/${userName}/repos`;
     fetch(url)
-    .then(repsonse=>{
+    .then(response=>{
         if(response.ok){
             console.log(reponse)
             return response.json();
